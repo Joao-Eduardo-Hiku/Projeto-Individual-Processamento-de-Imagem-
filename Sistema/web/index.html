@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Processamento de Imagens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="titulo"><h1>Processamento de Imagens</h1></header>
+
+<div class="acoes-topo">
+    <button class="botao botao--enviar" data-enviar>Enviar imagem</button>
+</div>
+
+<main class="grade">
+    <button class="botao" data-popup="popup-1">Operações<br>algébricas</button>
+    <a class="botao" href="transformacoesIntensidade.html">Transformações<br>de intensidade</a>
+    <button class="botao" data-popup="popup-2">Histograma</button>
+    <button class="botao" data-acao="contraste-adaptativo">Contraste<br>adaptativo</button>
+    <button class="botao" data-popup="popup-3">Filtragem<br>espacial</button>
+    <a class="botao" href="deteccaoBordas.html">Detecção de<br>bordas</a>
+    <button class="botao" data-acao="agucamento">Aguçamento</button>
+    <button class="botao" data-acao="convolucao-generica">Convolução<br>genérica</button>
+</main>
+
+<!-- Pop-up 1: Operações algébricas -->
+<div class="overlay" id="popup-1">
+    <div class="popup">
+        <button class="botao" data-acao="dissolve-cruzado-uniforme">Dissolve Cruzado uniforme</button>
+        <button class="botao" data-acao="dissolve-cruzado-nao-uniforme"> Dissolve Cruzado não<br>uniforme</button>
+    </div>
+</div>
+
+<!-- Pop-up 2: Histograma -->
+<div class="overlay" id="popup-2">
+    <div class="popup">
+        <button class="botao" data-acao="expansao">Expansão</button>
+        <button class="botao" data-acao="equalizacao">Equalização</button>
+    </div>
+</div>
+
+<!-- Pop-up 3: Filtragem espacial -->
+<div class="overlay" id="popup-3">
+    <div class="popup">
+        <button class="botao" data-acao="media">Média</button>
+        <button class="botao" data-acao="mediana">Mediana</button>
+    </div>
+</div>
+
+<!-- Pop-up 4: Imagem enviada -->
+<div class="overlay" id="popup-4">
+    <div class="popup popup--aviso">
+        <div class="mensagem">Imagem Enviada</div>
+    </div>
+</div>
+
+<!-- Pop-up 5: Tipo de imagem -->
+<div class="overlay" id="popup-5">
+    <div class="popup">
+        <button class="botao" data-tipo="cinza">Escala de cinza</button>
+        <button class="botao" data-tipo="rgb">RGB</button>
+    </div>
+</div>
+
+<input type="file" id="arquivo" accept="image/*" hidden>
+<script src="js/calculos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
