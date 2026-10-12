@@ -1026,16 +1026,3 @@ function matrizParaImageData(matriz) {
     }
     return image_data;
 }
-
-// Permite testar em Node (no navegador este bloco é ignorado)
-if (typeof module !== "undefined" && module.exports) {
-    module.exports = {
-        operacoesAlgebricas, transformacoesIntensidade, histograma,
-        aplicarContrasteAdaptativo, filtragemEspacial, aplicarFiltroMedia, aplicarFiltroMediana,
-        convulacaoGenerica, calcularConvolucao, agucamento, deteccaoBordas,
-        criarMascaraAgucamento, TIPO_TRANSFORMACAO,
-        MASCARA_RELEVO_H1, MASCARA_RELEVO_H2, MASCARA_BORDAS_H3, MASCARA_BORDAS_H4,
-        gerarMascarasKirsch, refletirIndice,
-        imageDataParaCanais, canaisParaImageData, converterCanaisParaCinza, converterRgbParaCinza
-    };
-}
