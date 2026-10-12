@@ -227,15 +227,14 @@ function misturarImagens(imagem1, imagem2, matriz_t) {
     return imagem_final;
 }
 
-// =====================================================================
-// 3. TRANSFORMAÇÕES DE INTENSIDADE
+
 //    tipo: 1 negativo | 2 alargamento de contraste | 3 limiarização
 //          4 potência | 5 logaritmo      (ver TIPO_TRANSFORMACAO)
 //    parametros: { s_min, s_max }      -> alargamento de contraste
 //                { valor_t }           -> limiarização
 //                { valor_c, potencia } -> potência (valor_c opcional, padrão 1)
 //                { valor_c }           -> logaritmo (opcional, padrão 255/ln(256))
-// =====================================================================
+
 
 function transformacoesIntensidade(tipo, imagem, parametros = {}) {
     validarImagem(imagem);
@@ -542,7 +541,6 @@ function calcularMediana(pixels) {
 //  opcoes.inverter_mascara    : true (padrão) = convolução de verdade (máscara
 //                               girada 180°); false = correlação.
 //  A máscara pode ter qualquer tamanho n x m, desde que n e m sejam ímpares.
-// =====================================================================
 
 function convulacaoGenerica(imagem, mascara, offset = 0, opcoes = {}) {
     const tratamento_borda = opcoes.tratamento_borda || "replicar";
